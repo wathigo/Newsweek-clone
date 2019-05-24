@@ -11,6 +11,7 @@
     <title></title>
   </head>
   <body>
+    <input id="toggle" class="toggle" type="checkbox">
     <header>
       <nav class="nav-1 navbar navbar-expand-lg .bg-danger">
         <p class="text-white w-25">Wed, May 22, 2019</p>
@@ -25,31 +26,45 @@
           <a href="#"> <i></i> </a>
         </div>
       </nav>
-      <nav class="nav-2">
-        <div>
-          <ul class="pl-0 pb-0 list-unstyled">
-            <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">U.S. <i></i> </a> </li>
-            <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">World <i></i> </a> </li>
-            <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">Business <i></i> </a> </li>
-            <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">Tech & Science <i></i> </a> </li>
-            <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">Culture <i></i> </a> </li>
-            <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">Sports <i></i> </a> </li>
-            <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">Health <i></i> </a> </li>
-            <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">Opinion <i></i> </a> </li>
-            <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">Ndelible <i></i> </a> </li>
-            <li class="d-inline-block text-center"><label for="search">Search <i class="fas fa-search"></i></label></li>
-          </ul>
-        </div>
-        <input id="search" type="text" name="search" value="">
-      </nav>
+      <div class="nav-wrapper w-100">
+        <nav class="nav-sticky">
+          <div class="navbar-header w-25">
+            <a class="navbar-brand float-left" href="#">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60" style="enable-background:new 0 0 395.6 60;" xml:space="preserve"><g><path class="st0" d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"></path></g></svg>
+          </a>
+          </div>
+          <div class="float-right">
+            <a class="text-white" href="#">SIGN IN</a>
+            <a class="btn-w" href="#">SUBSCRIBE ></a>
+            <label for="toggle"> &#8801;</label>
+          </div>
+          <div class="cl-both"></div>
+        </nav>
+        <nav class="nav-2">
+          <div>
+            <ul class="pl-0 pb-0 list-unstyled">
+              <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">U.S. <span>></span> </a> </li>
+              <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">World <span>></span> </a> </li>
+              <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">Business <span>></span> </a> </li>
+              <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">Tech & Science <span>></span> </a> </li>
+              <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">Culture <span>></span> </a> </li>
+              <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">Sports <span>></span> </a> </li>
+              <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">Health <span>></span> </a> </li>
+              <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">Opinion <span>></span> </a> </li>
+              <li class="d-inline-block text-center"> <a class="font-weight-bold" href="#">Ndelible <span>></span> </a> </li>
+              <li class="d-inline-block text-center"><label for="search">Search <i class="fas fa-search"></i></label></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="container-1">
       <div class="row">
         <div class="col featured-stories-wrapper order-3">
           <p>FEATURED STORIES</p>
           <div class="featured-stories">
-            <figure>
-              <img width="320" height="200" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/21/petebuttigiegmilitaryservice627x417.jpg" alt="Pete_Buttigieg_Military_Service627x417">
+            <figure width="320" height="200">
+              <img class="w-100"  src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/21/petebuttigiegmilitaryservice627x417.jpg" alt="Pete_Buttigieg_Military_Service627x417">
               <div class="img-tag text-center">
                 U.S.
               </div>
@@ -62,8 +77,8 @@
           </div>
 
           <div class="featured-stories">
-            <figure>
-              <img width="300" height="200" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/security-cameras-china.jpg" alt="Security cameras in China">
+            <figure width="300" height="200">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/security-cameras-china.jpg" alt="Security cameras in China">
             </figure>
             <p> <a class="red-border-hover" href="#">Supreme Court Will Not Hear Arguments on Controversial Feres Doctrine</a> </p>
             <p>“Congress must summon the courage to correct this antiquated law called the Feres doctrine that has harmed our troops,” attorney Natalie Khawam, who represents a dying U.S. Army Special Forces soldier, told Newsweek.</p>
@@ -73,8 +88,8 @@
             <div class="bd-btm"></div>
           </div>
           <div class="featured-stories">
-            <figure>
-              <img width="300" height="200" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/russia-turkey-s-400-anti-air-us-ultimatum-sanctions.jpg" alt="Russia Turkey s-400 anti-air US ultimatum sanctions">
+            <figure width="300" height="200">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/russia-turkey-s-400-anti-air-us-ultimatum-sanctions.jpg" alt="Russia Turkey s-400 anti-air US ultimatum sanctions">
             </figure>
             <p> <a class="red-border-hover" href="#">Ukraine's New Comedian President Calls for Snap Elections</a> </p>
             <p>Volodymyr Zelenskiy used his new authority to dissolve parliament and call for elections, but the timing could prove controversial.</p>
@@ -84,8 +99,8 @@
             <div class="bd-btm"></div>
           </div>
           <div class="featured-stories">
-            <figure>
-              <img width="300" height="200" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/apollo-8-moon-earth-earthrise.jpg" alt="apollo 8, moon, earth, earthrise">
+            <figure width="300" height="200">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/apollo-8-moon-earth-earthrise.jpg" alt="apollo 8, moon, earth, earthrise">
             </figure>
             <p> <a class="red-border-hover" href="#">Google Huawei Ban: Will Users Lose Access to Gmail, YouTube, Chrome Apps?</a> </p>
             <p>Google's parent company announced on Sunday it had suspended business with Chinese tech giant Huawei.</p>
@@ -95,26 +110,26 @@
             <div class="bd-btm"></div>
           </div>
           <div class="featured-stories">
-            <figure>
-              <img width="300" height="200" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/profile/grad_class_shu2018-05336.jpg" alt="school">
+            <figure width="300" height="200">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/profile/grad_class_shu2018-05336.jpg" alt="school">
             </figure>
             <p> <a class="red-border-hover" href="#">Law Firms: Fighting for a Noble Cause</a> </p>
             <p>Attorneys are an essential component of modern American society. But who leads the field?</p>
           </div>
           <div class="featured-stories">
-            <figure>
-              <img width="300" height="200" src="https://s.newsweek.com/sites/www.newsweek.com/files/2019-0308-guatemala-td-sponsor.jpg" alt="Guatemala">
+            <figure width="300" height="200">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/2019-0308-guatemala-td-sponsor.jpg" alt="Guatemala">
             </figure>
             <p> <a class="red-border-hover" href="#">Guatemala: The Heart of the Mayan World</a> </p>
             <p>A trip to Guatemala is an invitation to immerse yourself in history, culture, tradition, and romance.</p>
           </div>
         </div>
 
-        <div class="col stories-wrapper h-100 order-4">
+        <div class="col col-5 stories-wrapper h-100 order-4">
           <div class="top-story">
             <p>TOP STORY</p>
-            <figure>
-              <img width="500" height="400" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/md/public/2019/05/21/democrats-want-impeachment-wont-cross-nancy-pelosi.jpg" alt="democrats want impeachment but wont cross nancy pelosi">
+            <figure width="500" height="400">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/md/public/2019/05/21/democrats-want-impeachment-wont-cross-nancy-pelosi.jpg" alt="democrats want impeachment but wont cross nancy pelosi">
               <div class="img-tag text-center">
                 U.S.
               </div>
@@ -127,11 +142,10 @@
             <p>MORE STORIES</p>
           </div>
           <div class="more-stories row">
-
             <figure class="col-md-auto">
               <img width="135" height="90" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm_thumb/public/2019/05/22/norman-shaw-buildings.jpg" alt="Norman Shaw Buildings">
             </figure>
-            <div class="col">
+            <div class="col col-d">
               <p> <a href="#">Every Far-Right Minister in Austria Resigns From Government Amid Scandal</a> </p>
               <p>The party controls five government ministries.</p>
             </div>
@@ -140,7 +154,7 @@
             <figure class="col-md-auto">
               <img width="135" height="90" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm_thumb/public/2019/05/21/ussabrahamlincolnarabiansea4_0.jpg" alt="us, war, iran, donald, trump, america">
             </figure>
-            <div class="col">
+            <div class="col col-d">
               <p> <a href="#">Whole Foods to Become First National Supermarket to Ban Plastic Straws</a> </p>
               <p>The company announced plans to reduce an estimated 800,000 pounds of plastic each year with paper straws and smaller bags.</p>
             </div>
@@ -149,7 +163,7 @@
             <figure class="col-md-auto">
               <img width="135" height="90" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm_thumb/public/2019/05/22/gettyimages-1144781460.jpg" alt="GettyImages-1144781460" >
             </figure>
-            <div class="col">
+            <div class="col col-d">
               <p> <a href="#">‘Game of Thrones’ Season 8’s Unfinished Business and Abandoned Plotlines</a> </p>
               <p>While “Game of Thrones” wrapped up most of the larger character arcs and plot points, a lot went unanswered in the series finale.</p>
             </div>
@@ -158,7 +172,7 @@
             <figure class="col-md-auto">
               <img width="135" height="90" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm_thumb/public/2019/05/22/indonesia-riots-elections-us-embassy.jpg" alt="Indonesia riots elections US embassy">
             </figure>
-            <div class="col">
+            <div class="col col-d">
               <p> <a href="#">Steve Bannon Praises His 'Friend' Marine Le Pen</a> </p>
               <p>Bannon’s presence in France was called “an attack on the sovereignty of the election."</p>
             </div>
@@ -167,7 +181,7 @@
             <figure class="col-md-auto">
               <img width="135" height="90" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm_thumb/public/2019/05/22/starbucks.jpg" alt="starbucks ">
             </figure>
-            <div class="col">
+            <div class="col col-d">
               <p> <a href="#">Buttigieg Slams Tucker Carlson, Laura Ingraham at Fox News Town Hall</a> </p>
               <p>The 37-year-old Indiana mayor attacked Carlson and Ingraham on their own network on Sunday evening during his Fox News town hall.</p>
             </div>
@@ -176,7 +190,7 @@
             <figure class="col-md-auto">
               <img width="135" height="90" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm_thumb/public/2019/05/22/gettyimages-1144046741.jpg" alt="GettyImages-1144046741">
             </figure>
-            <div class="col">
+            <div class="col col-d">
               <p> <a href="#">Border Agent Accused of Hitting Migrant With Car Called Migrants ‘Subhuman’</a> </p>
               <p>In one text, Border Patrol Agent Matthew Bowen said, “PLEASE let us take the gloves off Trump!” </p>
             </div>
@@ -185,7 +199,7 @@
             <figure class="col-md-auto">
               <img width="135" height="90" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm_thumb/public/2019/05/22/member-ku-klux-klan.jpg" alt="A member of the Ku Klux Klan" >
             </figure>
-            <div class="col">
+            <div class="col col-d">
               <p> <a href="#">Renowned UFO Scientist Stanton Friedman Dies at 84</a> </p>
               <p>The scientist said the evidence for UFOs of alien origin visiting Earth was "overwhelming."</p>
             </div>
@@ -194,7 +208,7 @@
             <figure class="col-md-auto">
               <img width="135" height="90" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm_thumb/public/2019/05/21/gettyimages-1145318274-1.jpg" alt="GettyImages-1145318274 (1)" >
             </figure>
-            <div class="col">
+            <div class="col col-d">
               <p> <a href="#">Father Dies Trying to Cross U.S.-Canadian Border to Reunite With Daughter</a> </p>
               <p>Wilson Reynoso Vega, 32, died while trying to cross the U.S.-Canadian border to join his 11-year-old daughter, who was living with her mother in Philadelphia.</p>
             </div>
@@ -208,7 +222,7 @@
                 <figure class="col-md-auto">
                   <img src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/square_thumbnail/public/23544/profile_image/lee_habeeb_0.png">
                 </figure>
-                <div class="col">
+                <div class="col col-d">
                   <p> <a href="#">Trump's Good Economy is Only Good for the Likes of Donald Trump</a> </p>
                   <p>BY ROBERT REICH</p>
                 </div>
@@ -217,7 +231,7 @@
                 <figure class="col-md-auto">
                   <img src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/square_thumbnail/public/23544/profile_image/nw-columnists-fred-s.-karger.png">
                 </figure>
-                <div class="col">
+                <div class="col col-d">
                   <p> <a href="#">Housing Chief Gives Needy Americans a Lifeline Instead of a Waiting Line</a> </p>
                   <p>BY NEWT GINGRICH</p>
                 </div>
@@ -226,7 +240,7 @@
                 <figure class="col-md-auto">
                   <img src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/square_thumbnail/public/23544/profile_image/nw-columnists-stephaniechris.png">
                 </figure>
-                <div class="col">
+                <div class="col col-d">
                   <p> <a href="#">Should Jews and Muslims Be Exempt from Alabama's Abortion Law?</a> </p>
                   <p>BY STEVEN WALDMAN</p>
                 </div>
@@ -235,7 +249,7 @@
                 <figure class="col-md-auto">
                   <img src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/square_thumbnail/public/23544/profile_image/nw-columnists-michael-e.-mann.png">
                 </figure>
-                <div class="col">
+                <div class="col col-d">
                   <p> <a href="#">Why Trump Keeps Talking About a Failed Coup</a> </p>
                   <p>BY BRIAN L. OTT</p>
                 </div>
@@ -244,7 +258,7 @@
                 <figure class="col-md-auto">
                   <img src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/square_thumbnail/public/23544/profile_image/nw-columnists-gingrich-new.png">
                 </figure>
-                <div class="col">
+                <div class="col col-d">
                   <p> <a href="#">The Last Season of Game of Thrones is Rushed: The Characters Deserve Better</a> </p>
                   <p>BY TOM VAN LAER</p>
                 </div>
@@ -253,7 +267,7 @@
                 <figure class="col-md-auto">
                   <img src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/square_thumbnail/public/23544/profile_image/robert_reich.png">
                 </figure>
-                <div class="col">
+                <div class="col col-d">
                   <p> <a href="#">Birth Rates in the U.S. Have Dropped to a 32-Year Low—That's a Good Thing</a> </p>
                   <p>BY CAROLINE STEN HARTNETT</p>
                 </div>
@@ -265,7 +279,7 @@
               <figure class="col-md-auto">
                 <img width="100" height="80" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/gettyimages-610075306.jpg" alt="GettyImages-610075306">
               </figure>
-              <div class="col">
+              <div class="col col-d">
                 <p> <a href="#">'Big Brother' Announces June Premiere Date: Everything You Need To Know</a> </p>
               </div>
             </div>
@@ -273,7 +287,7 @@
               <figure class="col-md-auto">
                 <img width="100" height="80" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/gettyimages-1140042654.jpg" alt="Poway Synagogue vigil" >
               </figure>
-              <div class="col">
+              <div class="col col-d">
                 <p> <a href="#">Tana Mongeau Will Attend VidCon, Despite Last Year's TanaCon Scandal</a> </p>
               </div>
             </div>
@@ -281,7 +295,7 @@
               <figure class="col-md-auto">
                 <img width="100" height="80" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/can-jungkook-outswim-michael-phelps-bts-star-shares-pool-video-now-fans-think-hes.png" alt="Can Jungkook Outswim Michael Phelps? BTS Star Shares Pool Video Now Fans Think He's Faster Than Olympian">
               </figure>
-              <div class="col">
+              <div class="col col-d">
                 <p> <a href="#">Ric Flair Pulling Out of Starrcast II Appearance</a> </p>
               </div>
             </div>
@@ -289,7 +303,7 @@
               <figure class="col-md-auto">
                 <img width="100" height="80" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/02/06/will-catfish-be-tonight.png" alt="Will 'Catfish' Be on Tonight?">
               </figure>
-              <div class="col">
+              <div class="col col-d">
                 <p> <a href="#">9 Best Restaurants on the Upper East Side</a> </p>
               </div>
             </div>
@@ -297,7 +311,7 @@
               <figure class="col-md-auto">
                 <img width="100" height="80" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/gettyimages-1137292950-1.jpg" alt="GettyImages-1137292950 (1)">
               </figure>
-              <div class="col">
+              <div class="col col-d">
                 <p> <a href="#">A Guide to the ‘His Dark Materials’ Book Series</a> </p>
               </div>
             </div>
@@ -305,7 +319,7 @@
               <figure class="col-md-auto">
                 <img width="100" height="80" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/fox-news-democratic-2020-town-halls.png" alt="fox news democratic 2020 town halls">
               </figure>
-              <div class="col">
+              <div class="col col-d">
                 <p> <a href="#">Trump Admin Wants to Erase Thousands of Deaths Due to Air Pollution: Report</a> </p>
               </div>
             </div>
@@ -313,7 +327,7 @@
               <figure class="col-md-auto">
                 <img width="100" height="80" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/tor-project.gif" alt="Tor Project ">
               </figure>
-              <div class="col">
+              <div class="col col-d">
                 <p> <a href="#">Kim Kardashian Issues 'Serious Complaint' to Jack in the Box on Twitter</a> </p>
               </div>
             </div>
@@ -321,14 +335,14 @@
               <figure class="col-md-auto">
                 <img width="100" height="80" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/kate-middleton-queen-elizabeth.jpg" alt="Kate Middleton, Queen Elizabeth">
               </figure>
-              <div class="col">
+              <div class="col col-d">
                 <p> <a href="#">Morgan Stanley Warns of Global Recession If U.S.-China Trade Talks Collapse</a> </p>
               </div>
             </div>
           </div><!-- closing latest-news-wrapper -->
           <div class="special-edition">
-            <figure>
-              <img width="250" src="https://s.newsweek.com/sites/www.newsweek.com/files/eltonjohn_banner_343x229.jpg" alt="special edition">
+            <figure width="250">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/eltonjohn_banner_343x229.jpg" alt="special edition">
             </figure>
             <p> <a href="#">Elton John: The Music and Magic</a> </p>
             <p>Say goodbye to a half-century on the yellow brick road with this new Special Edition, including exclusive photos from Elton’s epic career.</p>
@@ -443,29 +457,29 @@
         <div class="bd-btm"></div>
         <div class="row">
           <section class="editors-pic col">
-            <figure>
-              <img width="260" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/georgia-abortion-bill-protest.jpg" alt="georgia abortion bill protest">
+            <figure width="260">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/georgia-abortion-bill-protest.jpg" alt="georgia abortion bill protest">
             </figure>
             <h4> <a href="#">Senator Disputes Trump Administration's 'Twist' on 'Defensive' Iran Moves</a> </h4>
             <p>Senator Chris Murphy said "dumb wars start when each party mistakenly believes that the other party's defensive or reactive actions are actually offensive and proactive."</p>
           </section>
           <section class="editors-pic col">
-            <figure>
-              <img width="260" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/iran-cancer-military-choke-sanctions-john-kennedy.jpg" alt="Iran cancer military choke sanctions John Kennedy">
+            <figure width="260">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/iran-cancer-military-choke-sanctions-john-kennedy.jpg" alt="Iran cancer military choke sanctions John Kennedy">
             </figure>
             <h4> <a href="#">National Dog Rescue Day: Everything You Need to Know About Dog Adoption</a> </h4>
             <p>Adopting a dog isn't always simple, but it's worth it to give a furry friend a healthy home.</p>
           </section>
           <section class="editors-pic col">
-            <figure>
-              <img width="260" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/mnuchin-tubman-harriet-bill-redesign-treasury.jpg" alt="mnuchin tubman harriet bill redesign treasury">
+            <figure width="260">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/mnuchin-tubman-harriet-bill-redesign-treasury.jpg" alt="mnuchin tubman harriet bill redesign treasury">
             </figure>
             <h4> <a href="#">National Dog Rescue Day: Everything You Need to Know About Dog Adoption</a> </h4>
             <p>Adopting a dog isn't always simple, but it's worth it to give a furry friend a healthy home.</p>
           </section>
           <section class="editors-pic col">
-            <figure>
-              <img width="260" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/iran-cancer-military-choke-sanctions-john-kennedy.jpg" alt="Iran cancer military choke sanctions John Kennedy">
+            <figure width="260">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/iran-cancer-military-choke-sanctions-john-kennedy.jpg" alt="Iran cancer military choke sanctions John Kennedy">
             </figure>
             <h4> <a href="#">Kremlin: U.S. ‘Mood Swings’ Make It Hard to Predict Next Trump-Putin Summit</a> </h4>
             <p>President Donald Trump canceled his last meeting with Russian President Vladimir Putin at the G20 in November, and the Kremlin wants Washington to take the next steps in arranging new talks.</p>
@@ -473,29 +487,29 @@
         </div><!-- closing row-->
           <div class="row">
             <section class="editors-pic col">
-              <figure>
-                <img width="260" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/gettyimages-1145684416.jpg" alt="GettyImages-1145684416">
+              <figure width="260">
+                <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/gettyimages-1145684416.jpg" alt="GettyImages-1145684416">
               </figure>
               <h4> <a href="#">'Games of Thrones' Finale: Did You Spot the Water Bottle Editing Fail?</a> </h4>
               <p>Another blunder has been spotted by "Game of Thrones" fans.</p>
             </section>
             <section class="editors-pic col">
-              <figure>
-                <img width="260" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/donaldtrumpjrbookmagapresident.jpg" alt="donald, trump, jr, president, book, maga">
+              <figure width="260">
+                <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/donaldtrumpjrbookmagapresident.jpg" alt="donald, trump, jr, president, book, maga">
               </figure>
               <h4> <a href="#">‘Monster’ $69,000 Gold Nugget Unearthed by Amateur Treasure Hunter</a> </h4>
               <p>The nugget weighed roughly three pounds.</p>
             </section>
             <section class="editors-pic col">
-              <figure>
-                <img width="260" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/gettyimages-999293088.jpg" alt="GettyImages-999293088">
+              <figure width="260">
+                <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/gettyimages-999293088.jpg" alt="GettyImages-999293088">
               </figure>
               <h4> <a href="#">Justin Amash Faces Primary Challenge After Calling for Trump's Impeachment</a> </h4>
               <p>A Republican called for President Donald Trump's impeachment. Now he faces a primary challenger.</p>
             </section>
             <section class="editors-pic col">
-              <figure>
-                <img width="260" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/starbucks.jpg" alt="starbucks ">
+              <figure width="260">
+                <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/starbucks.jpg" alt="starbucks ">
               </figure>
               <h4> <a href="#">Traveling While Gay: Six Essential LGBT Travel Tips</a> </h4>
               <p>In many parts of the world, LGBT travelers face unique concerns. Here are the best ways to ensure a hassle-free vacation.</p>
@@ -507,52 +521,52 @@
         <div class="bd-btm"></div>
         <div class="row">
           <div class="slideshow col">
-            <figure>
-              <img width="260" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/16/dog-canoe-imagecountry-getty-images_0.jpg" alt="dog in canoe ImageCountry Getty Images">
+            <figure width="260">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/16/dog-canoe-imagecountry-getty-images_0.jpg" alt="dog in canoe ImageCountry Getty Images">
             </figure>
             <p> <a href="#">These Photos Show What D-Day was like for Soldiers Landing in Normandy</a> </p>
           </div>
           <div class="slideshow col">
-            <figure>
-              <img width="260" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/13/d-day.jpg" alt="d-day">
+            <figure width="260">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/13/d-day.jpg" alt="d-day">
             </figure>
             <p> <a href="#">Dreams and Manifestos: The Architectural Vision of Ricardo Bofill</a> </p>
           </div>
           <div class="slideshow col">
-            <figure>
-              <img width="260" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/08/p180photogregoricivera.jpg" alt="p180_PhotoGregoriCivera-CourtesyofRicardoBofillTallerdeArquitectura_RicardoBofill_gestalten2019">
+            <figure width="260">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/08/p180photogregoricivera.jpg" alt="p180_PhotoGregoriCivera-CourtesyofRicardoBofillTallerdeArquitectura_RicardoBofill_gestalten2019">
             </figure>
             <p> <a href="#">A Century of Royal Baby Pictures</a> </p>
           </div>
           <div class="slideshow col">
-            <figure>
-              <img width="260" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/12/princess-diana-baby-harry.jpg" alt="princess diana baby harry">
+            <figure width="260">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/12/princess-diana-baby-harry.jpg" alt="princess diana baby harry">
             </figure>
             <p> <a href="#">Chernobyl: From Nuclear Ghost Town to Tourist Attraction</a> </p>
           </div>
         </div><!-- closing row -->
         <div class="row">
           <div class="slideshow col">
-            <figure>
-              <img width="260" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/12/princess-diana-baby-harry.jpg" alt="princess diana baby harry">
+            <figure width="260">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/12/princess-diana-baby-harry.jpg" alt="princess diana baby harry">
             </figure>
             <p> <a href="#">Chernobyl: From Nuclear Ghost Town to Tourist Attraction</a> </p>
           </div>
           <div class="slideshow col">
-            <figure>
-              <img width="260" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/03/11-chernobyl.jpg" alt="11 Chernobyl">
+            <figure width="260">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/03/11-chernobyl.jpg" alt="11 Chernobyl">
             </figure>
             <p> <a href="#">Met Gala 2019: Lady Gaga in Her Underwear, Harry Styles Frees the Nipple, Jared Leto Loses His Head</a> </p>
           </div>
           <div class="slideshow col">
-            <figure>
-              <img width="260" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/07/billy-porter.jpg" alt="Billy Porter">
+            <figure width="260">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/07/billy-porter.jpg" alt="Billy Porter">
             </figure>
             <p> <a href="#">The History of Drag, from Julian Eltinge to 'RuPaul's Drag Race'</a> </p>
           </div>
           <div class="slideshow col">
-            <figure>
-              <img width="260" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/12/princess-diana-baby-harry.jpg" alt="princess diana baby harry">
+            <figure width="260">
+              <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/12/princess-diana-baby-harry.jpg" alt="princess diana baby harry">
             </figure>
             <p> <a href="#">Chernobyl: From Nuclear Ghost Town to Tourist Attraction</a> </p>
           </div>
@@ -565,14 +579,14 @@
           <div class="col-8">
             <div class="row">
               <div class="us-story-tp col">
-                <figure>
-                  <img width="390" height="265" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/23/children-participate-koran-clas.jpg" alt="Children participate in a Koran clas">
+                <figure width="390" height="265">
+                  <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/23/children-participate-koran-clas.jpg" alt="Children participate in a Koran clas">
                 </figure>
                 <p> <a href="#">AOC: 'One of the Biggest Myths About Congress Is That It's an Easy Job'</a> </p>
               </div>
               <div class="us-story-tp col">
-                <figure>
-                  <img width="390" height="265" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/23/flood.jpg" alt="flood">
+                <figure width="390" height="265">
+                  <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/23/flood.jpg" alt="flood">
                 </figure>
                 <p> <a href="#">Man Whose Head Was Run Over at Go Topless Wakes Up, Writes 'My Head Hurts'</a> </p>
               </div>
@@ -607,14 +621,14 @@
           <div class="col-8">
             <div class="row">
               <div class="world-story-tp col">
-                <figure>
-                  <img width="390" height="265" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/23/renaud-camus-great-replacement-theory.jpg" alt="Renaud Camus Great Replacement theory">
+                <figure width="390" height="265">
+                  <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/23/renaud-camus-great-replacement-theory.jpg" alt="Renaud Camus Great Replacement theory">
                 </figure>
                 <p> <a href="#">China 'Will Never' Join Arms Control Deal with the U.S. and Russia</a> </p>
               </div>
               <div class="world-story-tp col">
-                <figure>
-                  <img width="390" height="265" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/20/donald-trump-vladimir-putin.jpg" alt="Donald Trump, Vladimir Putin">
+                <figure width="390" height="265">
+                  <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/20/donald-trump-vladimir-putin.jpg" alt="Donald Trump, Vladimir Putin">
                 </figure>
                 <p> <a href="#">Poland's PM Says Returning Property to Jews Is Akin to Nazi Victory</a> </p>
               </div>
@@ -649,14 +663,14 @@
           <div class="col-8">
             <div class="row">
               <div class="business-story-tp col">
-                <figure>
-                  <img width="390" height="265" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/prada-fur.jpg" alt="Prada, Fur">
+                <figure width="390" height="265">
+                  <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/prada-fur.jpg" alt="Prada, Fur">
                 </figure>
                 <p> <a href="#">Suicides, Bankruptcy Rising Among Farmers Amid Trade War, Union VP Says</a> </p>
               </div>
               <div class="business-story-tp col">
-                <figure>
-                  <img width="390" height="265" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/21/bencarsonoreoreo.jpg" alt="video, ben, carson, oreo, reo, porter">
+                <figure width="390" height="265">
+                  <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/21/bencarsonoreoreo.jpg" alt="video, ben, carson, oreo, reo, porter">
                 </figure>
                 <p> <a href="#">Ivanka Trump Called Out After Her Landlord's Mining Lease Renewed</a> </p>
               </div>
@@ -691,14 +705,14 @@
           <div class="col-8">
             <div class="row">
               <div class="science-story-tp col">
-                <figure>
-                  <img width="390" height="265" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/oval-palace-maya.jpg" alt="Oval Palace, Maya">
+                <figure width="390" height="265">
+                  <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/oval-palace-maya.jpg" alt="Oval Palace, Maya">
                 </figure>
                 <p> <a href="#">Massive Impact with Dwarf Planet Caused Differences Between Moon's Faces</a> </p>
               </div>
               <div class="science-story-tp col">
-                <figure>
-                  <img width="390" height="265" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/telegram.jpg" alt="Telegram ">
+                <figure width="390" height="265">
+                  <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/telegram.jpg" alt="Telegram ">
                 </figure>
                 <p> <a href="#">Scientists May Have Solved One of the Mysteries of Pluto's Subsurface Ocean</a> </p>
               </div>
@@ -733,14 +747,14 @@
           <div class="col-8">
             <div class="row">
               <div class="culture-story-tp col">
-                <figure>
-                  <img width="390" height="265" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/who-steven-assantis-wife-stephanie-update-woman-married-my-600-lb-life-patient.jpg" alt="Who Is Steven Assanti’s Wife, Stephanie? Update on Woman Married To ‘My 600-Lb Life’ Patient ">
+                <figure width="390" height="265">
+                  <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/who-steven-assantis-wife-stephanie-update-woman-married-my-600-lb-life-patient.jpg" alt="Who Is Steven Assanti’s Wife, Stephanie? Update on Woman Married To ‘My 600-Lb Life’ Patient ">
                 </figure>
                 <p> <a href="#">Isaac Mizrahi's Rules for Anxiety-Free Travel</a> </p>
               </div>
               <div class="culture-story-tp col">
-                <figure>
-                  <img width="390" height="265" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/04/05/hannah-brown-bachelorette-promo.png" alt="Hannah Brown Bachelorette Promo">
+                <figure width="390" height="265">
+                  <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/04/05/hannah-brown-bachelorette-promo.png" alt="Hannah Brown Bachelorette Promo">
                 </figure>
                 <p> <a href="#">‘The Voice’ 2019 Top 4 Finale Performances & Predictions</a> </p>
               </div>
@@ -775,14 +789,14 @@
           <div class="col-8">
             <div class="row">
               <div class="sports-story-tp col">
-                <figure>
-                  <img width="390" height="265" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/sami-zayn-kevin-owens-super-showdown-wwe-saudi-arabia.jpg" alt="sami zayn kevin owens super showdown wwe saudi arabia">
+                <figure width="390" height="265">
+                  <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/sami-zayn-kevin-owens-super-showdown-wwe-saudi-arabia.jpg" alt="sami zayn kevin owens super showdown wwe saudi arabia">
                 </figure>
                 <p> <a href="#">Who Was Niki Lauda? Driver Who Survived Crash to Win F1 Championship Dies</a> </p>
               </div>
               <div class="sports-story-tp col">
-                <figure>
-                  <img width="390" height="265" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/sami-zayn-kevin-owens-super-showdown-wwe-saudi-arabia.jpg" alt="sami zayn kevin owens super showdown wwe saudi arabia">
+                <figure width="390" height="265">
+                  <img class="w-100" src="https://s.newsweek.com/sites/www.newsweek.com/files/styles/sm/public/2019/05/22/sami-zayn-kevin-owens-super-showdown-wwe-saudi-arabia.jpg" alt="sami zayn kevin owens super showdown wwe saudi arabia">
                 </figure>
                 <p> <a href="#">How to Watch Hangman Page vs PAC Online</a> </p>
               </div>
