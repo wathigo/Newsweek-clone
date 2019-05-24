@@ -178,14 +178,11 @@ footer ul li{
 }
 .subscribe-items-wrapper{
   background-color: #f4f5f6;
+  height: 500px;
 }
 .btn{
   background-color: red !important;
   color: white !important;
-}
-footer{
-  margin-top: 100px;
-  box-sizing: content-box !important;
 }
 h4 a{
   color: black;
@@ -193,17 +190,50 @@ h4 a{
 p a{
   color: black
 }
-@media only screen and (min-width:500px){
+footer div.float-left p{
+  color: black;
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 10px;
+  font-size: 0.8em;
+}
+footer ul.float-right li a{
+  color: black;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  font-size: 1.2em;
+}
+.pr-10{
+  padding-right: 10px;
+}
+.bd-left{
+  border-right: 1px solid black;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+.faint-black{
+  color: black;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 0.9em;
+}
+footer div:last-of-type ul li a{
+
 
 }
-@media only screen and (min-width:1024px){
+.cl-both{
+  clear: both;
+}
+@media only screen and (max-width:500px){
+  .stories-wrapper{
+    order: 1 !important;
+  }
+}
+@media only screen and (max-width:1540px){
   .stories-wrapper{
     padding-top: 15px;
     position: sticky !important;
-    top: -100%;
+    top: -120%;
   }
   .stick{
     position: sticky !important;
-    top: -100%;
+    top: -120%;
   }
 }
