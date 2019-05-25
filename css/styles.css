@@ -282,6 +282,9 @@ body{
   margin-top: -50px;
   background-color: red;
 }
+.font-md-1{
+  font-size: 0.85em;
+}
 .nav-wrapper .nav-sticky label:last-of-type{
   display: none;
 }
@@ -355,6 +358,9 @@ body{
   }
   .stories-wrapper{
     order: 1 !important;
+  }
+  .subscribe-items-wrapper{
+    height: 680px;
   }
   #toggle:checked ~ header .nav-wrapper .nav-2{
     margin-top: 0;
