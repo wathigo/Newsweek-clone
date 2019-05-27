@@ -92,7 +92,7 @@ main{
 .nav-2 div ul li{
   border-left: 1px solid rgb(0, 0, 0);
   border-left: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 0 23px ;
+  padding: 0 22px ;
 }
 .nav-2 div ul li a{
   color: black;
