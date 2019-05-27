@@ -76,6 +76,7 @@ footer svg{
   display: block;
   background-color: #f72210;
   border-left: 13px solid #ffff;
+  border-top: 12px solid #f72210;
 }
 .nav-2{
   padding: 10px 0;
