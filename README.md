@@ -1,5 +1,5 @@
 # Newsweek-clone
-A simple website that is designed to look like the [Newsweek] home page (https://www.newsweek.com). You can find the live version of the website [here](https://wathigo.github.io/Newsweek-clone/).
+A simple website that is designed to look like the [Newsweek](https://www.newsweek.com) home page. You can find the live version of the website [here](https://wathigo.github.io/Newsweek-clone/).
 
 
 ## Preliquisites
